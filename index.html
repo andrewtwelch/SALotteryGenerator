@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SA Lotteries Ticket Generator</title>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link href="styles.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>SA Lotteries Ticket Generator</h1>
+    <h3>X Lotto Quantity: <input type="number" name="XLotto" id="XLottoQty"></input></h3>
+    <h3>Oz Lotto Quantity: <input type="number" name="OzLotto" id="OzLottoQty"></input></h3>
+    <h3>Powerball Quantity: <input type="number" name="Powerball" id="PowerballQty"></input></h3>
+    <button onclick="generateTickets()">Generate Tickets</button>
+    <button onclick="clearTicketArea()">Clear Tickets</button>
+    <div id="ticketarea">
+    </div>
+  </body>
+</html>
