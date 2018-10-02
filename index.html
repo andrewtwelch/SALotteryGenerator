@@ -9,11 +9,59 @@
   </head>
   <body>
     <h1>SA Lotteries Ticket Generator</h1>
-    <h3>X Lotto Quantity: <input type="number" name="XLotto" id="XLottoQty"></input></h3>
-    <h3>Oz Lotto Quantity: <input type="number" name="OzLotto" id="OzLottoQty"></input></h3>
-    <h3>Powerball Quantity: <input type="number" name="Powerball" id="PowerballQty"></input></h3>
-    <button onclick="generateTickets()">Generate Tickets</button>
-    <button onclick="clearTicketArea()">Clear Tickets</button>
+    <table>
+      <tr>
+        <td>
+          <h3 class="title">X Lotto</h3>
+        </td>
+        <td>
+          <button class="qtybutton" onclick="xLottoIncrease()">+</button>
+        </td>
+        <td class="qty">
+          <h3 id="xlotto">0</h3>
+        </td>
+        <td>
+          <button class="qtybutton" onclick="xLottoDecrease()">-</button>
+        </td>
+        <td class="buttoncolumn">
+          <button class="actionbutton" onclick="generateTickets()">Generate Tickets</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h3 class="title">Oz Lotto</h3>
+        </td>
+        <td>
+          <button class="qtybutton" onclick="ozLottoIncrease()">+</button>
+        </td>
+        <td class="qty">
+          <h3 id="ozlotto">0</h3>
+        </td>
+        <td>
+          <button class="qtybutton" onclick="ozLottoDecrease()">-</button>
+        </td>
+        <td class="buttoncolumn">
+        <button class="actionbutton" onclick="clearTicketArea()">Clear Tickets</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h3 class="title">Powerball</h3>
+        </td>
+        <td>
+          <button class="qtybutton" onclick="powerballIncrease()">+</button>
+        </td>
+        <td class="qty">
+          <h3 id="powerball">0</h3>
+        </td>
+        <td>
+          <button class="qtybutton" onclick="powerballDecrease()">-</button>
+        </td>
+        <td class="buttoncolumn">
+          <button class="actionbutton" onclick="clearQty()">Clear Quantities</button>
+        </td>
+      </tr>
+    </table>
     <div id="ticketarea">
     </div>
   </body>

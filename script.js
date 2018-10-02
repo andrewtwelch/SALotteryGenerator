@@ -1,3 +1,7 @@
+var xLottoQty = 0;
+var ozLottoQty = 0;
+var powerballQty = 0;
+
 function duplicateChecker(number, list) {
   for (var i = 0; i < list.length; i++) {
     if (number == list[i]) {
@@ -94,10 +98,56 @@ function powerball(quantity) {
   }
 }
 
+function xLottoIncrease() {
+  xLottoQty++;
+  updateQty();
+}
+
+function xLottoDecrease() {
+  if (xLottoQty > 0) {
+    xLottoQty--;
+  }
+  updateQty();
+}
+
+function ozLottoIncrease() {
+  ozLottoQty++;
+  updateQty();
+}
+
+function ozLottoDecrease() {
+  if (ozLottoQty > 0) {
+    ozLottoQty--;
+  }
+  updateQty();
+}
+
+function powerballIncrease() {
+  powerballQty++;
+  updateQty();
+}
+
+function powerballDecrease() {
+  if (powerballQty > 0) {
+    powerballQty--;
+  }
+  updateQty();
+}
+
+function updateQty() {
+  $("#xlotto").text(xLottoQty);
+  $("#ozlotto").text(ozLottoQty);
+  $("#powerball").text(powerballQty);
+}
+
+function clearQty() {
+  xLottoQty = 0;
+  ozLottoQty = 0;
+  powerballQty = 0;
+  updateQty();
+}
+
 function generateTickets() {
-  var xLottoQty = document.getElementById("XLottoQty").value;
-  var ozLottoQty = document.getElementById("OzLottoQty").value;
-  var powerballQty = document.getElementById("PowerballQty").value;
   clearTicketArea();
   xLotto(xLottoQty);
   ozLotto(ozLottoQty);
